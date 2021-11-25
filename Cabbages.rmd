@@ -28,6 +28,8 @@ $H_A$ There is a diffference in the vitamin C content based on cultivation metho
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
+VitC is a numerical variable. Cult is categorical variable, So the helper file we need is the numerical cat.
+
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -37,6 +39,18 @@ $H_A$ There is a diffference in the vitamin C content based on cultivation metho
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+basicCN <- ggplot(veggy,aes(x=Cult,y=VitC))
+```
+
+## Now Add in a Box plot
+
+```{r}
+basicCN + geom_boxplot()
+```
+
+
 
 ### Numerical Descriptive Results
 
